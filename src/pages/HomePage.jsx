@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
 	return (
 		<>
-			<Container fluid>
+			<Container
+				fluid
+				class='d-flex justify-content-center align-items-centers home-container'>
 				<Row>
-					<Col>
+					<Col class='d-flex justify-content-center align-content-center'>
 						<Jumbotron
 							className='d-flex justify-content-center align-items-center flex-column px-4'
 							fluid>
