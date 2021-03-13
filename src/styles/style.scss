@@ -16,3 +16,18 @@ body {
 .btn-grp {
 	width: 100%;
 }
+
+.card-container {
+	width: 100% !important;
+	overflow: hidden;
+}
+
+.card {
+	width: 75%;
+}
+
+@media (min-width: 900px) {
+	.card {
+		width: 50%;
+	}
+}
