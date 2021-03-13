@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { NoGraphs, Graphs } from '../components/index';
 
 const GraphChoice = () => {
 	const [numberOfGraphs, setNumberOfGraphs] = useState(0);
+	const [graphOutput, setGraphOutput] = useState({
+		graph: <Graphs />,
+		dataSetOne: 100,
+		dataSetTwo: 200,
+	});
+	const [listOfGraphs, setListOfGraphs] = useState(null);
 
 	const numberOfGraphsHandler = (e) => {
 		console.log(e.target.value);
@@ -21,6 +27,13 @@ const GraphChoice = () => {
 	};
 
 	//can use a switch case
+
+	switch (numberOfGraphs) {
+		case 1:
+			return setListOfGraphs(graphOutput);
+		default:
+			console.log('nothing');
+	}
 
 	return (
 		<Container>
@@ -48,8 +61,10 @@ const GraphChoice = () => {
 				<Col>
 					{numberOfGraphs === 0 || numberOfGraphs === undefined ? (
 						<NoGraphs />
+					) : listOfGraphs ? (
+						listOfGraphs.graph
 					) : (
-						<Graphs />
+						<p>Loading....</p>
 					)}
 				</Col>
 			</Row>
