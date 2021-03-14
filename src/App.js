@@ -7,6 +7,8 @@ import { GraphChoice, HomePage } from './pages/index';
 function App() {
 	const [graphChoice, setGraphChoice] = useState('');
 	const [graphSelection, setGraphSelection] = useState([]);
+	const [companyName, setCompanyName] = useState(null);
+	const [companyInfoInput, setCompanyInfoInput] = useState(null);
 
 	const addToGraphSelection = () => {
 		setGraphSelection(...graphSelection, graphChoice);
@@ -16,7 +18,12 @@ function App() {
 			{/* Routes */}
 			<Switch>
 				<Route path='/' exact>
-					<HomePage />
+					<HomePage
+						companyName={companyName}
+						setCompanyName={setCompanyName}
+						companyInfoInput={companyInfoInput}
+						setCompanyInfoInput={setCompanyInfoInput}
+					/>
 				</Route>
 				<Route path='/graph-choice' exact>
 					<GraphChoice />
