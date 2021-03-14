@@ -7,9 +7,9 @@ const HomePage = ({
 	setCompanyName,
 	companyInfoInput,
 	setCompanyInfoInput,
+	nextPage,
+	setNextPage,
 }) => {
-	const [nextPage, setNextPage] = useState(false);
-
 	return (
 		<>
 			<Container
@@ -29,7 +29,6 @@ const HomePage = ({
 								<a href='#'>
 									<Button className='btn-danger'>Click to go home</Button>
 								</a>
-
 								<Button
 									onClick={() => {
 										setNextPage(true);
@@ -46,6 +45,7 @@ const HomePage = ({
 						companyName={companyName}
 						setCompanyName={setCompanyName}
 						setCompanyInfoInput={setCompanyInfoInput}
+						setNextPage={setNextPage}
 					/>
 				) : (
 					<h1>Please Enter Your Information</h1>

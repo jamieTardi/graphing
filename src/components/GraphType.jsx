@@ -1,0 +1,58 @@
+import React from 'react';
+import { Image, Container, Row, Col } from 'react-bootstrap';
+import barChart from '../assets/icons/bar-chart.svg';
+import donut from '../assets/icons/donut.svg';
+import lineChart from '../assets/icons/line-chart.svg';
+import pieChart from '../assets/icons/pie-chart.svg';
+import scatter from '../assets/icons/scatter.svg';
+
+const GraphType = ({ setGraphOneType }) => {
+	return (
+		<Container>
+			<Row className='mb-3'>
+				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+					<Image
+						className='svg-images'
+						src={barChart}
+						onClick={() => {
+							setGraphOneType('bar');
+						}}
+					/>
+				</Col>
+				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+					<Image
+						className='svg-images'
+						src={donut}
+						onClick={() => {
+							setGraphOneType('doughnut');
+						}}
+					/>
+				</Col>
+				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+					<Image
+						className='svg-images'
+						src={lineChart}
+						className='svg-images'
+						src={lineChart}
+						onClick={() => {
+							setGraphOneType('line');
+						}}
+					/>
+				</Col>
+			</Row>
+			<Row>
+				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+					<Image className='svg-images' src={pieChart} />
+				</Col>
+				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+					<Image className='svg-images ' src={scatter} />
+				</Col>
+				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+					<Image className='svg-images' src={barChart} />
+				</Col>
+			</Row>
+		</Container>
+	);
+};
+
+export default GraphType;

@@ -2,13 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { NoGraphs, Graphs } from '../components/index';
 
-const GraphChoice = () => {
+const GraphChoice = ({ companyName, graphOneType, setGraphOneType }) => {
 	const [numberOfGraphs, setNumberOfGraphs] = useState(0);
-	const [graphOutput, setGraphOutput] = useState({
-		graph: <Graphs />,
-		dataSetOne: 100,
-		dataSetTwo: 200,
-	});
 	const [listOfGraphs, setListOfGraphs] = useState(null);
 
 	const numberOfGraphsHandler = (e) => {
@@ -30,7 +25,9 @@ const GraphChoice = () => {
 
 	switch (numberOfGraphs) {
 		case 1:
-			return <Graphs />;
+			return (
+				<Graphs graphOneType={graphOneType} setGraphOneType={setGraphOneType} />
+			);
 		case 2:
 			return (
 				<>
@@ -46,8 +43,8 @@ const GraphChoice = () => {
 		<Container>
 			<h1>Please Choose a Graph you want to use</h1>
 			<p>
-				Welcome to the graphing software, you can select up to five different
-				graphs to display your requested data.
+				Welcome {companyName} to the graphing software, you can select up to
+				five different graphs to display your requested data.
 			</p>
 			{numberOfGraphs !== 0 && numberOfGraphs > 0 ? (
 				<p>You have selected {numberOfGraphs} graphs to be used.</p>

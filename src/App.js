@@ -9,6 +9,8 @@ function App() {
 	const [graphSelection, setGraphSelection] = useState([]);
 	const [companyName, setCompanyName] = useState(null);
 	const [companyInfoInput, setCompanyInfoInput] = useState(null);
+	const [nextPage, setNextPage] = useState(false);
+	const [graphOneType, setGraphOneType] = useState('pie');
 
 	const addToGraphSelection = () => {
 		setGraphSelection(...graphSelection, graphChoice);
@@ -23,10 +25,16 @@ function App() {
 						setCompanyName={setCompanyName}
 						companyInfoInput={companyInfoInput}
 						setCompanyInfoInput={setCompanyInfoInput}
+						nextPage={nextPage}
+						setNextPage={setNextPage}
 					/>
 				</Route>
 				<Route path='/graph-choice' exact>
-					<GraphChoice />
+					<GraphChoice
+						companyName={companyName}
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+					/>
 				</Route>
 			</Switch>
 		</>

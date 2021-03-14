@@ -13,18 +13,26 @@ import {
 import { Link } from 'react-router-dom';
 
 const ModalPopUp = (
-	{ companyName, setCompanyName, companyInfoInput, setCompanyInfoInput },
+	{
+		companyName,
+		setCompanyName,
+		companyInfoInput,
+		setCompanyInfoInput,
+		setNextPage,
+	},
 	props,
 ) => {
 	const [modal, setModal] = useState(true);
 
 	const { buttonLabel, className } = props;
 
-	const toggle = () => setModal(!modal);
+	const toggle = () => {
+		setModal(!modal);
+		setNextPage(false);
+	};
 
 	const handleSetCompanyInfo = (e) => {
 		setCompanyInfoInput(e.target.value);
-		console.log(companyInfoInput);
 	};
 
 	const handleCompanyInfo = () => {
@@ -39,13 +47,14 @@ const ModalPopUp = (
 					personalised graphs please enter your company name in the provided
 					input box.
 				</ModalBody>
-				<FormGroup>
-					<Label for='company name'>Company Name</Label>
+				<FormGroup class='d-flex justify-content-center align-items-center flex-column'>
+					<Label for='company name'>Insert Your Company Name</Label>
 					<Input
 						type='text'
 						name='name'
 						id='name'
 						onChange={handleSetCompanyInfo}
+						className='mb-3'
 					/>
 					{companyInfoInput ? (
 						<Button color='primary' onClick={handleCompanyInfo}>
