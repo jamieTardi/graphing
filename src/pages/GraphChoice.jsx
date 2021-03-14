@@ -30,7 +30,14 @@ const GraphChoice = () => {
 
 	switch (numberOfGraphs) {
 		case 1:
-			return setListOfGraphs(graphOutput);
+			return <Graphs />;
+		case 2:
+			return (
+				<>
+					<Graphs />
+					<Graphs />
+				</>
+			);
 		default:
 			console.log('nothing');
 	}
@@ -62,7 +69,7 @@ const GraphChoice = () => {
 					{numberOfGraphs === 0 || numberOfGraphs === undefined ? (
 						<NoGraphs />
 					) : listOfGraphs ? (
-						listOfGraphs.graph
+						<p>Graph</p>
 					) : (
 						<p>Loading....</p>
 					)}

@@ -10,8 +10,11 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import barHero from '../assets/images/bar-chart-main.svg';
+import { graphData } from '../lib/graphData';
 
 const Graphs = () => {
+	const graphOneData = graphData[0];
+	console.log(graphOneData);
 	return (
 		<div className='card-container d-flex justify-content-center align-items-center'>
 			<Card className='mt-4 p-2'>
