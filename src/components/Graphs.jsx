@@ -10,7 +10,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import barHero from '../assets/images/bar-chart-main.svg';
-import { Doughnut, Pie, Bar, Line, Scatter } from 'react-chartjs-2';
+import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
 import { graphData } from '../lib/graphData';
 import { GraphType } from './';
 
@@ -67,6 +67,20 @@ const Graphs = ({ graphOneType, setGraphOneType }) => {
 				<>
 					<GraphType setGraphOneType={setGraphOneType} />
 					<Line data={data} />
+				</>
+			);
+		case 'scatter':
+			return (
+				<>
+					<GraphType setGraphOneType={setGraphOneType} />
+					<Scatter data={data} />
+				</>
+			);
+		case 'radar':
+			return (
+				<>
+					<GraphType setGraphOneType={setGraphOneType} />
+					<Radar data={data} />
 				</>
 			);
 		default:

@@ -21,8 +21,7 @@ const GraphChoice = ({ companyName, graphOneType, setGraphOneType }) => {
 		}
 	};
 
-	//can use a switch case
-
+	//Switch case statement,
 	switch (numberOfGraphs) {
 		case 1:
 			return (
@@ -31,7 +30,10 @@ const GraphChoice = ({ companyName, graphOneType, setGraphOneType }) => {
 		case 2:
 			return (
 				<>
-					<Graphs />
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+					/>
 					<Graphs />
 				</>
 			);

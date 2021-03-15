@@ -11,10 +11,8 @@ function App() {
 	const [companyInfoInput, setCompanyInfoInput] = useState(null);
 	const [nextPage, setNextPage] = useState(false);
 	const [graphOneType, setGraphOneType] = useState('pie');
+	const [graphTwoType, setGraphTwoType] = useState('bar');
 
-	const addToGraphSelection = () => {
-		setGraphSelection(...graphSelection, graphChoice);
-	};
 	return (
 		<>
 			{/* Routes */}
@@ -34,6 +32,8 @@ function App() {
 						companyName={companyName}
 						graphOneType={graphOneType}
 						setGraphOneType={setGraphOneType}
+						graphTwoType={graphTwoType}
+						setGraphTwoType={setGraphTwoType}
 					/>
 				</Route>
 			</Switch>

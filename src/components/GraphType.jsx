@@ -10,7 +10,7 @@ const GraphType = ({ setGraphOneType }) => {
 	return (
 		<Container>
 			<Row className='mb-3'>
-				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
 					<Image
 						className='svg-images'
 						src={barChart}
@@ -18,8 +18,9 @@ const GraphType = ({ setGraphOneType }) => {
 							setGraphOneType('bar');
 						}}
 					/>
+					<h5>Bar Chart</h5>
 				</Col>
-				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
 					<Image
 						className='svg-images'
 						src={donut}
@@ -27,8 +28,9 @@ const GraphType = ({ setGraphOneType }) => {
 							setGraphOneType('doughnut');
 						}}
 					/>
+					<h5>Doughnut Chart</h5>
 				</Col>
-				<Col className='mb-3 d-flex justify-content-center align-items-center'>
+				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
 					<Image
 						className='svg-images'
 						src={lineChart}
@@ -38,17 +40,39 @@ const GraphType = ({ setGraphOneType }) => {
 							setGraphOneType('line');
 						}}
 					/>
+					<h5>Line Chart</h5>
 				</Col>
 			</Row>
 			<Row>
-				<Col className='mb-3 d-flex justify-content-center align-items-center'>
-					<Image className='svg-images' src={pieChart} />
+				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
+					<Image
+						className='svg-images'
+						src={pieChart}
+						onClick={() => {
+							setGraphOneType('pie');
+						}}
+					/>
+					<h5>Pie Chart</h5>
 				</Col>
-				<Col className='mb-3 d-flex justify-content-center align-items-center'>
-					<Image className='svg-images ' src={scatter} />
+				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
+					<Image
+						className='svg-images '
+						src={scatter}
+						onClick={() => {
+							setGraphOneType('scatter');
+						}}
+					/>
+					<h5>Scatter Graph</h5>
 				</Col>
-				<Col className='mb-3 d-flex justify-content-center align-items-center'>
-					<Image className='svg-images' src={barChart} />
+				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
+					<Image
+						className='svg-images'
+						src={barChart}
+						onClick={() => {
+							setGraphOneType('radar');
+						}}
+					/>
+					<h5>Radar Graph</h5>
 				</Col>
 			</Row>
 		</Container>
