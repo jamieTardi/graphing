@@ -7,11 +7,15 @@ const GraphChoice = ({
 	companyName,
 	graphOneType,
 	setGraphOneType,
-	setGraphTwoType,
-	graphTwoType,
+	enterData,
+	setEnterData,
+	graphData,
+	setGraphData,
 }) => {
 	const [numberOfGraphs, setNumberOfGraphs] = useState(0);
 	const [listOfGraphs, setListOfGraphs] = useState(null);
+
+	console.log(graphData);
 
 	const numberOfGraphsHandler = (e) => {
 		console.log(e.target.value);
@@ -26,6 +30,10 @@ const GraphChoice = ({
 				setNumberOfGraphs(0);
 			}
 		}
+	};
+
+	const handleEnterData = (e) => {
+		setEnterData(e.target.value);
 	};
 
 	//Switch case statement,
@@ -71,6 +79,25 @@ const GraphChoice = ({
 						className='form-control'
 						placeholder='Enter a number between 1-5'
 					/>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<p>
+						Please enter each piece of data one piece of data at a time and
+						press submit.
+					</p>
+					<input
+						className='form-control'
+						placeholder='Please enter each piece of data and press submit'
+						onChange={handleEnterData}
+					/>
+					<Button
+						onClick={() => {
+							setGraphData([...graphData, enterData]);
+						}}>
+						Enter Data
+					</Button>
 				</Col>
 			</Row>
 			<Row>

@@ -5,13 +5,13 @@ import { Link, Switch, Route } from 'react-router-dom';
 import { GraphChoice, HomePage } from './pages/index';
 
 function App() {
-	const [graphChoice, setGraphChoice] = useState('');
-	const [graphSelection, setGraphSelection] = useState([]);
+	const [enterData, setEnterData] = useState(0);
+	const [graphData, setGraphData] = useState([]);
 	const [companyName, setCompanyName] = useState(null);
 	const [companyInfoInput, setCompanyInfoInput] = useState(null);
 	const [nextPage, setNextPage] = useState(false);
 	const [graphOneType, setGraphOneType] = useState(['pie']);
-	const [graphTwoType, setGraphTwoType] = useState('bar');
+	const [graphTwoType, setGraphTwoType] = useState(['bar']);
 
 	return (
 		<>
@@ -35,6 +35,10 @@ function App() {
 						setGraphOneType={setGraphOneType}
 						graphTwoType={graphTwoType}
 						setGraphTwoType={setGraphTwoType}
+						enterData={enterData}
+						setEnterData={setEnterData}
+						graphData={graphData}
+						setGraphData={setGraphData}
 					/>
 				</Route>
 			</Switch>
