@@ -14,7 +14,12 @@ import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
 import { graphData } from '../lib/graphData';
 import { GraphType } from './';
 
-const Graphs = ({ graphOneType, setGraphOneType }) => {
+const Graphs = ({
+	graphOneType,
+	setGraphOneType,
+	graphTwoType,
+	setGraphTwoType,
+}) => {
 	const graphOneData = graphData[0];
 	const data = {
 		labels: ['Dataset 1', 'Dataset 2', 'Dataset 3'],
@@ -39,7 +44,7 @@ const Graphs = ({ graphOneType, setGraphOneType }) => {
 		],
 	};
 
-	switch (graphOneType) {
+	switch (graphOneType[0] || graphTwoType[0]) {
 		case 'pie':
 			return (
 				<>

@@ -10,7 +10,7 @@ function App() {
 	const [companyName, setCompanyName] = useState(null);
 	const [companyInfoInput, setCompanyInfoInput] = useState(null);
 	const [nextPage, setNextPage] = useState(false);
-	const [graphOneType, setGraphOneType] = useState('pie');
+	const [graphOneType, setGraphOneType] = useState(['pie']);
 	const [graphTwoType, setGraphTwoType] = useState('bar');
 
 	return (
@@ -28,6 +28,7 @@ function App() {
 					/>
 				</Route>
 				<Route path='/graph-choice' exact>
+					{/* Move graph 2 down */}
 					<GraphChoice
 						companyName={companyName}
 						graphOneType={graphOneType}

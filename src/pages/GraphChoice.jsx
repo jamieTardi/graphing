@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { NoGraphs, Graphs } from '../components/index';
+import Draggable from 'react-draggable';
 
-const GraphChoice = ({ companyName, graphOneType, setGraphOneType }) => {
+const GraphChoice = ({
+	companyName,
+	graphOneType,
+	setGraphOneType,
+	setGraphTwoType,
+	graphTwoType,
+}) => {
 	const [numberOfGraphs, setNumberOfGraphs] = useState(0);
 	const [listOfGraphs, setListOfGraphs] = useState(null);
 
@@ -34,7 +41,10 @@ const GraphChoice = ({ companyName, graphOneType, setGraphOneType }) => {
 						graphOneType={graphOneType}
 						setGraphOneType={setGraphOneType}
 					/>
-					<Graphs />
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+					/>
 				</>
 			);
 		default:

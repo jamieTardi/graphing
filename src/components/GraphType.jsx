@@ -15,7 +15,7 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images'
 						src={barChart}
 						onClick={() => {
-							setGraphOneType('bar');
+							setGraphOneType(['bar']);
 						}}
 					/>
 					<h5>Bar Chart</h5>
@@ -25,7 +25,7 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images'
 						src={donut}
 						onClick={() => {
-							setGraphOneType('doughnut');
+							setGraphOneType(['doughnut']);
 						}}
 					/>
 					<h5>Doughnut Chart</h5>
@@ -37,7 +37,7 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images'
 						src={lineChart}
 						onClick={() => {
-							setGraphOneType('line');
+							setGraphOneType(['line']);
 						}}
 					/>
 					<h5>Line Chart</h5>
@@ -49,7 +49,7 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images'
 						src={pieChart}
 						onClick={() => {
-							setGraphOneType('pie');
+							setGraphOneType(['pie']);
 						}}
 					/>
 					<h5>Pie Chart</h5>
@@ -59,7 +59,7 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images '
 						src={scatter}
 						onClick={() => {
-							setGraphOneType('scatter');
+							setGraphOneType(['scatter']);
 						}}
 					/>
 					<h5>Scatter Graph</h5>
@@ -69,7 +69,7 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images'
 						src={barChart}
 						onClick={() => {
-							setGraphOneType('radar');
+							setGraphOneType(['radar']);
 						}}
 					/>
 					<h5>Radar Graph</h5>
