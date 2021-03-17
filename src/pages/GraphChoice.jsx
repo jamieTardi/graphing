@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Container, Row, Col } from 'react-bootstrap';
-import { NoGraphs, Graphs } from '../components/index';
+import React, { useState } from 'react';
+import { Button, Container, Row, Col, Table } from 'react-bootstrap';
+import { NoGraphs, Graphs, DataTable } from '../components/index';
 import Draggable from 'react-draggable';
 
 const GraphChoice = ({
@@ -34,6 +34,11 @@ const GraphChoice = ({
 
 	const handleEnterData = (e) => {
 		setEnterData(e.target.value);
+	};
+
+	const handleSubmitData = (e) => {
+		setGraphData([...graphData, enterData]);
+		console.log(graphData);
 	};
 
 	//Switch case statement,
@@ -71,35 +76,36 @@ const GraphChoice = ({
 			) : (
 				<p>There are currently no graphs selected.</p>
 			)}
-			<Row>
-				<Col>
-					<input
-						onChange={numberOfGraphsHandler}
-						type='number'
-						className='form-control'
-						placeholder='Enter a number between 1-5'
-					/>
-				</Col>
-			</Row>
-			<Row>
-				<Col>
-					<p>
-						Please enter each piece of data one piece of data at a time and
-						press submit.
-					</p>
-					<input
-						className='form-control'
-						placeholder='Please enter each piece of data and press submit'
-						onChange={handleEnterData}
-					/>
-					<Button
-						onClick={() => {
-							setGraphData([...graphData, enterData]);
-						}}>
-						Enter Data
-					</Button>
-				</Col>
-			</Row>
+			<form>
+				<Row>
+					<Col>
+						<input
+							onChange={numberOfGraphsHandler}
+							type='number'
+							className='form-control'
+							placeholder='Enter a number between 1-5'
+						/>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<p>
+							Please enter each piece of data one piece of data at a time and
+							press submit.
+						</p>
+						<input
+							className='form-control'
+							placeholder='Please enter each piece of data and press submit'
+							onChange={handleEnterData}
+							type='number'
+						/>
+						<Button onClick={handleSubmitData} type='reset'>
+							Enter Data
+						</Button>
+					</Col>
+				</Row>
+			</form>
+			<DataTable graphData={graphData} />
 			<Row>
 				<Col>
 					{numberOfGraphs === 0 || numberOfGraphs === undefined ? (
