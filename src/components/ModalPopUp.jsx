@@ -47,25 +47,33 @@ const ModalPopUp = (
 					personalised graphs please enter your company name in the provided
 					input box.
 				</ModalBody>
-				<FormGroup class='d-flex justify-content-center align-items-center flex-column'>
-					<Label for='company name'>Insert Your Company Name</Label>
-					<Input
-						type='text'
-						name='name'
-						id='name'
-						onChange={handleSetCompanyInfo}
-						className='mb-3'
-					/>
-					{companyInfoInput ? (
-						<Button color='primary' onClick={handleCompanyInfo}>
-							Submit Company name
-						</Button>
-					) : (
-						<Button color='primary' disabled>
-							Submit Company name
-						</Button>
-					)}
-				</FormGroup>
+				<div class='d-flex justify-content-center align-items-center'>
+					<FormGroup className='d-flex justify-content-center align-items-center flex-column'>
+						<Label for='company name'>Insert Your Company Name</Label>
+						<Input
+							type='text'
+							name='name'
+							id='name'
+							onChange={handleSetCompanyInfo}
+							className='mb-3'
+						/>
+						{companyInfoInput ? (
+							<Button
+								color='primary'
+								className='mb-2 btn btn-primary modal-submit-btn'
+								onClick={handleCompanyInfo}>
+								Submit Company name
+							</Button>
+						) : (
+							<Button
+								color='primary'
+								className='mb-2 btn btn-primary modal-submit-btn'
+								disabled>
+								Submit Company name
+							</Button>
+						)}
+					</FormGroup>
+				</div>
 				<ModalFooter>
 					{companyName ? (
 						<Link to='/graph-choice'>
