@@ -39,6 +39,7 @@ function App() {
 						setEnterData={setEnterData}
 						graphData={graphData}
 						setGraphData={setGraphData}
+						
 					/>
 				</Route>
 			</Switch>
