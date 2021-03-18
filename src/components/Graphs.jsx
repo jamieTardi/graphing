@@ -11,7 +11,6 @@ import {
 import { Link } from 'react-router-dom';
 import barHero from '../assets/images/bar-chart-main.svg';
 import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
-import { graphData } from '../lib/graphData';
 import { GraphType } from './';
 
 const Graphs = ({
@@ -19,6 +18,7 @@ const Graphs = ({
 	setGraphOneType,
 	graphTwoType,
 	setGraphTwoType,
+	graphData,
 }) => {
 	const graphOneData = graphData[0];
 	const data = {
@@ -26,11 +26,7 @@ const Graphs = ({
 		datasets: [
 			{
 				label: 'First dataset',
-				data: [
-					graphOneData.dataSet1,
-					graphOneData.dataSet2,
-					graphOneData.dataSet3,
-				],
+				data: [graphData],
 				fill: true,
 				backgroundColor: 'rgba(75,192,192,0.2)',
 				borderColor: 'rgba(75,192,192,1)',

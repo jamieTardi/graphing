@@ -4,23 +4,27 @@ import { Table, Button } from 'react-bootstrap';
 const DataTable = ({ graphData }) => {
 	return (
 		<div>
-			<Table variant='dark' responsive>
-				<thead>
-					<tr>
-						<th>Dataset Number</th>
-						<th>Dataset Value</th>
-					</tr>
-				</thead>
-				<tbody>
-					{graphData.map((value, index) => (
+			{graphData.length > 0 ? (
+				<Table variant='dark' responsive>
+					<thead>
 						<tr>
-							<td>{++index}</td>
-							<td>{value}</td>
-							<Button class='btn-danger btn'>Remove Data</Button>
+							<th>Dataset Number</th>
+							<th>Dataset Value</th>
 						</tr>
-					))}
-				</tbody>
-			</Table>
+					</thead>
+					<tbody>
+						{graphData.map((value, index) => (
+							<tr>
+								<td>{++index}</td>
+								<td>{value}</td>
+								<Button class='btn-danger btn'>Remove Data</Button>
+							</tr>
+						))}
+					</tbody>
+				</Table>
+			) : (
+				<p>Currently There has been no data added to the charts.</p>
+			)}
 		</div>
 	);
 };

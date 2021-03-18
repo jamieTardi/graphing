@@ -12,6 +12,7 @@ function App() {
 	const [nextPage, setNextPage] = useState(false);
 	const [graphOneType, setGraphOneType] = useState(['pie']);
 	const [graphTwoType, setGraphTwoType] = useState(['bar']);
+	const [dataName, setDataName] = useState('');
 
 	return (
 		<>
@@ -39,7 +40,6 @@ function App() {
 						setEnterData={setEnterData}
 						graphData={graphData}
 						setGraphData={setGraphData}
-						
 					/>
 				</Route>
 			</Switch>

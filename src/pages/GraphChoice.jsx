@@ -45,7 +45,11 @@ const GraphChoice = ({
 	switch (numberOfGraphs) {
 		case 1:
 			return (
-				<Graphs graphOneType={graphOneType} setGraphOneType={setGraphOneType} />
+				<Graphs
+					graphOneType={graphOneType}
+					setGraphOneType={setGraphOneType}
+					graphData={graphData}
+				/>
 			);
 		case 2:
 			return (
@@ -53,10 +57,12 @@ const GraphChoice = ({
 					<Graphs
 						graphOneType={graphOneType}
 						setGraphOneType={setGraphOneType}
+						graphData={graphData}
 					/>
 					<Graphs
 						graphOneType={graphOneType}
 						setGraphOneType={setGraphOneType}
+						graphData={graphData}
 					/>
 				</>
 			);
@@ -98,6 +104,24 @@ const GraphChoice = ({
 							placeholder='Please enter each piece of data and press submit'
 							onChange={handleEnterData}
 							type='number'
+						/>
+						<Button onClick={handleSubmitData} type='reset'>
+							Enter Data
+						</Button>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<p>
+							Please enter the name for each piece of data in order, for example
+							if your first piece of data is for GME stock and it 100 enter GME
+							and in the next box 100.
+						</p>
+						<input
+							className='form-control'
+							placeholder='Please enter each piece of data and press submit'
+							onChange={handleEnterData}
+							type='text'
 						/>
 						<Button onClick={handleSubmitData} type='reset'>
 							Enter Data
