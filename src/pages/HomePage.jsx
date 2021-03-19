@@ -14,7 +14,7 @@ const HomePage = ({
 		<>
 			<Container
 				fluid
-				class='d-flex justify-content-center align-items-centers home-container'>
+				className='d-flex justify-content-center align-items-centers home-container flex-column'>
 				<Row>
 					<Col class='d-flex justify-content-center align-content-center'>
 						<Jumbotron
@@ -48,7 +48,7 @@ const HomePage = ({
 						setNextPage={setNextPage}
 					/>
 				) : (
-					<h1>Please Enter Your Information</h1>
+					<h1 className='text-center'>Please Enter Your Information</h1>
 				)}
 			</Container>
 		</>

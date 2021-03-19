@@ -41,7 +41,7 @@ const ModalPopUp = (
 	return (
 		<div>
 			<Modal isOpen={modal} toggle={toggle} className={className}>
-				<ModalHeader toggle={toggle}>Modal title</ModalHeader>
+				<ModalHeader toggle={toggle}>Company Information</ModalHeader>
 				<ModalBody>
 					Thank you for taking the time to use this graphing software, to get
 					personalised graphs please enter your company name in the provided
