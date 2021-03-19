@@ -15,8 +15,10 @@ const DataTable = ({ graphData }) => {
 					<tbody>
 						{graphData.map((value, index) => (
 							<tr>
+								{console.log(value)}
 								<td>{++index}</td>
-								<td>{value}</td>
+								<td>{value.dataNumber}</td>
+								<td>{value.dataName}</td>
 								<Button class='btn-danger btn'>Remove Data</Button>
 							</tr>
 						))}

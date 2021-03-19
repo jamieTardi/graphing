@@ -40,6 +40,8 @@ function App() {
 						setEnterData={setEnterData}
 						graphData={graphData}
 						setGraphData={setGraphData}
+						dataName={dataName}
+						setDataName={setDataName}
 					/>
 				</Route>
 			</Switch>

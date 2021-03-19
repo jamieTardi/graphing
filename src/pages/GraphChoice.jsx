@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Container, Row, Col, Table } from 'react-bootstrap';
 import { NoGraphs, Graphs, DataTable } from '../components/index';
 import Draggable from 'react-draggable';
+import { v4 as uuidv4 } from 'uuid';
 
 const GraphChoice = ({
 	companyName,
@@ -11,11 +12,11 @@ const GraphChoice = ({
 	setEnterData,
 	graphData,
 	setGraphData,
+	dataName,
+	setDataName,
 }) => {
 	const [numberOfGraphs, setNumberOfGraphs] = useState(0);
 	const [listOfGraphs, setListOfGraphs] = useState(null);
-
-	console.log(graphData);
 
 	const numberOfGraphsHandler = (e) => {
 		console.log(e.target.value);
@@ -35,9 +36,19 @@ const GraphChoice = ({
 	const handleEnterData = (e) => {
 		setEnterData(e.target.value);
 	};
+	const handleEnterDataName = (e) => {
+		setDataName(e.target.value);
+	};
 
-	const handleSubmitData = (e) => {
-		setGraphData([...graphData, enterData]);
+	const handleSubmitData = () => {
+		setGraphData([
+			...graphData,
+			{
+				id: uuidv4(),
+				dataName: dataName,
+				dataNumber: enterData,
+			},
+		]);
 		console.log(graphData);
 	};
 
@@ -105,9 +116,6 @@ const GraphChoice = ({
 							onChange={handleEnterData}
 							type='number'
 						/>
-						<Button onClick={handleSubmitData} type='reset'>
-							Enter Data
-						</Button>
 					</Col>
 				</Row>
 				<Row>
@@ -120,7 +128,7 @@ const GraphChoice = ({
 						<input
 							className='form-control'
 							placeholder='Please enter each piece of data and press submit'
-							onChange={handleEnterData}
+							onChange={handleEnterDataName}
 							type='text'
 						/>
 						<Button onClick={handleSubmitData} type='reset'>
