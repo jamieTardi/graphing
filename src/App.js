@@ -13,6 +13,7 @@ function App() {
 	const [graphOneType, setGraphOneType] = useState(['pie']);
 	const [graphTwoType, setGraphTwoType] = useState(['bar']);
 	const [dataName, setDataName] = useState('');
+	const [color, setColor] = useState('rgba(255, 0, 0, 1)');
 
 	return (
 		<>
@@ -42,6 +43,8 @@ function App() {
 						setGraphData={setGraphData}
 						dataName={dataName}
 						setDataName={setDataName}
+						color={color}
+						setColor={setColor}
 					/>
 				</Route>
 			</Switch>

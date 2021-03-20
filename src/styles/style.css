@@ -59,6 +59,11 @@ body {
   cursor: pointer;
 }
 
+.color-box {
+  width: 100px;
+  height: 60px;
+}
+
 @media (min-width: 900px) {
   .card {
     width: 50%;

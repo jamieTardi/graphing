@@ -8,6 +8,7 @@ const Graphs = ({
 	graphTwoType,
 	setGraphTwoType,
 	graphData,
+	color,
 }) => {
 	let dataNumberArray = [];
 	let dataNameArray = [];
@@ -16,7 +17,6 @@ const Graphs = ({
 		dataNumberArray.push(parseInt(element.dataNumber));
 		dataNameArray.push(element.dataName);
 	});
-	console.log(dataNumberArray);
 	const data = {
 		labels: dataNameArray,
 		datasets: [
@@ -24,8 +24,8 @@ const Graphs = ({
 				label: 'First dataset',
 				data: dataNumberArray,
 				fill: true,
-				backgroundColor: 'rgba(75,192,192,0.2)',
-				borderColor: 'rgba(75,192,192,1)',
+				backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+				borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
 			},
 		],
 	};
