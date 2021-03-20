@@ -1,15 +1,4 @@
 import React from 'react';
-import {
-	Card,
-	CardImg,
-	CardText,
-	CardBody,
-	CardTitle,
-	CardSubtitle,
-	Button,
-} from 'reactstrap';
-import { Link } from 'react-router-dom';
-import barHero from '../assets/images/bar-chart-main.svg';
 import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
 import { GraphType } from './';
 
@@ -20,22 +9,23 @@ const Graphs = ({
 	setGraphTwoType,
 	graphData,
 }) => {
-	const graphOneData = graphData[0];
+	let dataNumberArray = [];
+	let dataNameArray = [];
+
+	graphData.forEach((element) => {
+		dataNumberArray.push(parseInt(element.dataNumber));
+		dataNameArray.push(element.dataName);
+	});
+	console.log(dataNumberArray);
 	const data = {
-		labels: ['Dataset 1', 'Dataset 2', 'Dataset 3'],
+		labels: dataNameArray,
 		datasets: [
 			{
 				label: 'First dataset',
-				data: [graphData],
+				data: dataNumberArray,
 				fill: true,
 				backgroundColor: 'rgba(75,192,192,0.2)',
 				borderColor: 'rgba(75,192,192,1)',
-			},
-			{
-				label: 'Second dataset',
-				data: [33, 25, 35, 51, 54, 76],
-				fill: false,
-				borderColor: '#742774',
 			},
 		],
 	};

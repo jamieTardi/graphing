@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Button, Container, Row, Col, Table } from 'react-bootstrap';
+import {
+	Button,
+	Container,
+	Row,
+	Col,
+	Table,
+	FormGroup,
+	FormLabel,
+} from 'react-bootstrap';
 import { NoGraphs, Graphs, DataTable } from '../components/index';
 import Draggable from 'react-draggable';
 import { v4 as uuidv4 } from 'uuid';
@@ -93,23 +101,33 @@ const GraphChoice = ({
 			) : (
 				<p>There are currently no graphs selected.</p>
 			)}
-			<form>
+			<p>
+				Please enter the name for each piece of data in order, for example if
+				your first piece of data is for GME stock and it 100 enter GME and in
+				the next box 100.
+			</p>
+			<p>
+				Please enter each piece of data one piece of data at a time and press
+				Enter Data.
+			</p>
+			<FormGroup>
 				<Row>
 					<Col>
+						<FormLabel className='font-weight-bold'>Name of Dataset</FormLabel>
 						<input
-							onChange={numberOfGraphsHandler}
-							type='number'
 							className='form-control'
-							placeholder='Enter a number between 1-5'
+							placeholder='Please enter each piece of data and press submit'
+							onChange={handleEnterDataName}
+							type='text'
 						/>
 					</Col>
 				</Row>
+
 				<Row>
 					<Col>
-						<p>
-							Please enter each piece of data one piece of data at a time and
-							press submit.
-						</p>
+						<FormLabel className='font-weight-bold'>
+							Number in Dataset
+						</FormLabel>
 						<input
 							className='form-control'
 							placeholder='Please enter each piece of data and press submit'
@@ -120,23 +138,22 @@ const GraphChoice = ({
 				</Row>
 				<Row>
 					<Col>
-						<p>
-							Please enter the name for each piece of data in order, for example
-							if your first piece of data is for GME stock and it 100 enter GME
-							and in the next box 100.
-						</p>
+						<FormLabel className='font-weight-bold'>
+							Number of Graphs you require
+						</FormLabel>
 						<input
+							onChange={numberOfGraphsHandler}
+							type='number'
 							className='form-control'
-							placeholder='Please enter each piece of data and press submit'
-							onChange={handleEnterDataName}
-							type='text'
+							placeholder='Enter a number between 1-5'
+							disabled={graphData.length > 1 ? false : true}
 						/>
 						<Button onClick={handleSubmitData} type='reset'>
 							Enter Data
 						</Button>
 					</Col>
 				</Row>
-			</form>
+			</FormGroup>
 			<DataTable graphData={graphData} />
 			<Row>
 				<Col>
