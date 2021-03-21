@@ -11,7 +11,6 @@ import {
 import { NoGraphs, Graphs, DataTable } from '../components/index';
 import Draggable from 'react-draggable';
 import { v4 as uuidv4 } from 'uuid';
-import { HexColorPicker } from 'react-colorful';
 
 const GraphChoice = ({
 	companyName,
@@ -25,11 +24,12 @@ const GraphChoice = ({
 	setDataName,
 	color,
 	setColor,
+	setColorModal,
+	colorModal,
 }) => {
 	const [numberOfGraphs, setNumberOfGraphs] = useState(0);
 	const [listOfGraphs, setListOfGraphs] = useState(null);
 	const [colorPallete, setColorPallete] = useState([]);
-	const [colorModal, setColorModal] = useState(false);
 
 	const numberOfGraphsHandler = (e) => {
 		console.log(e.target.value);
@@ -44,13 +44,6 @@ const GraphChoice = ({
 				setNumberOfGraphs(0);
 			}
 		}
-	};
-
-	const handleColorPallete = () => {
-		setColorPallete([
-			...colorPallete,
-			{ color, id: Math.floor(1000 * Math.random()) },
-		]);
 	};
 
 	const handleEnterData = (e) => {
@@ -74,10 +67,6 @@ const GraphChoice = ({
 		]);
 	};
 
-	const deleteColor = () => {
-		setColorPallete((currentColors) => currentColors.filter((item) => !item));
-	};
-
 	//Switch case statement,
 	switch (numberOfGraphs) {
 		case 1:
@@ -87,6 +76,11 @@ const GraphChoice = ({
 					setGraphOneType={setGraphOneType}
 					graphData={graphData}
 					color={color}
+					setColorModal={setColorModal}
+					colorModal={colorModal}
+					setColor={setColor}
+					colorPallete={colorPallete}
+					setColorPallete={setColorPallete}
 				/>
 			);
 		case 2:
@@ -96,6 +90,9 @@ const GraphChoice = ({
 						graphOneType={graphOneType}
 						setGraphOneType={setGraphOneType}
 						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
 					/>
 					<Graphs
 						graphOneType={graphOneType}
@@ -173,45 +170,6 @@ const GraphChoice = ({
 					</Col>
 				</Row>
 			</FormGroup>
-
-			<Modal show={colorModal}>
-				<Modal.Header
-					closeButton
-					onClick={() => {
-						setColorModal((prev) => !prev);
-					}}>
-					<Modal.Title>Colour Picker for your Chart Data</Modal.Title>
-				</Modal.Header>
-				<Modal.Body className='d-flex'>
-					<div>
-						<HexColorPicker color={color} onChange={setColor} />
-						<p>The Hex Code is: {color}</p>
-						<Button variant='primary' onClick={handleColorPallete}>
-							Add Color to Pallete
-						</Button>
-					</div>
-					<div className='d-flex flex-column justify-content-center align-items-center'>
-						{colorPallete.map((col, index) => (
-							<div className='d-flex flex-column justify-content-center align-items-center'>
-								<div
-									className='color-box'
-									style={{ background: col.color }}></div>
-								<p>
-									Your Color number {++index} is: {col.color}
-								</p>
-							</div>
-						))}
-						{colorPallete.length > 0 ? (
-							<Button onClick={deleteColor}>Delete all colors</Button>
-						) : (
-							''
-						)}
-					</div>
-				</Modal.Body>
-				<Button className='btn-success' onClick={() => setColorModal(false)}>
-					Save selected colors for charts
-				</Button>
-			</Modal>
 
 			<DataTable graphData={graphData} />
 			<Row>

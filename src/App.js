@@ -14,6 +14,7 @@ function App() {
 	const [graphTwoType, setGraphTwoType] = useState(['bar']);
 	const [dataName, setDataName] = useState('');
 	const [color, setColor] = useState('rgba(255, 0, 0, 1)');
+	const [colorModal, setColorModal] = useState(false);
 
 	return (
 		<>
@@ -30,7 +31,6 @@ function App() {
 					/>
 				</Route>
 				<Route path='/graph-choice' exact>
-					{/* Move graph 2 down */}
 					<GraphChoice
 						companyName={companyName}
 						graphOneType={graphOneType}
@@ -45,6 +45,8 @@ function App() {
 						setDataName={setDataName}
 						color={color}
 						setColor={setColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
 					/>
 				</Route>
 			</Switch>

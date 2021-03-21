@@ -1,6 +1,6 @@
 import React from 'react';
 import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
-import { GraphType } from './';
+import { GraphType, ColorModal } from './';
 
 const Graphs = ({
 	graphOneType,
@@ -9,6 +9,11 @@ const Graphs = ({
 	setGraphTwoType,
 	graphData,
 	color,
+	colorPallete,
+	setColorPallete,
+	setColorModal,
+	colorModal,
+	setColor,
 }) => {
 	let dataNumberArray = [];
 	let dataNameArray = [];
@@ -24,24 +29,58 @@ const Graphs = ({
 				label: 'First dataset',
 				data: dataNumberArray,
 				fill: true,
-				backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+				backgroundColor: ['#c1fa00'],
 				borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
 			},
 		],
 	};
-
+	const handleColorPallete = () => {
+		setColorPallete([
+			...colorPallete,
+			{ color, id: Math.floor(1000 * Math.random()) },
+		]);
+	};
+	const deleteColor = () => {
+		setColorPallete((currentColors) => currentColors.filter((item) => !item));
+	};
+	console.log(colorModal);
 	switch (graphOneType[0] || graphTwoType[0]) {
 		case 'pie':
 			return (
 				<>
-					<GraphType setGraphOneType={setGraphOneType} />
+					<ColorModal
+						setColorPallete={setColorPallete}
+						colorPallete={colorPallete}
+						color={color}
+						deleteColor={deleteColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
+						handleColorPallete={handleColorPallete}
+						setColor={setColor}
+					/>
 
-					<Pie data={data} />
+					<GraphType setGraphOneType={setGraphOneType} />
+					<div
+						onClick={() => {
+							setColorModal((prev) => !prev);
+						}}>
+						<Pie data={data} />
+					</div>
 				</>
 			);
 		case 'bar':
 			return (
 				<>
+					<ColorModal
+						setColorPallete={setColorPallete}
+						colorPallete={colorPallete}
+						color={color}
+						deleteColor={deleteColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
+						handleColorPallete={handleColorPallete}
+						setColor={setColor}
+					/>
 					<GraphType setGraphOneType={setGraphOneType} />
 					<Bar data={data} />
 				</>
@@ -49,6 +88,16 @@ const Graphs = ({
 		case 'doughnut':
 			return (
 				<>
+					<ColorModal
+						setColorPallete={setColorPallete}
+						colorPallete={colorPallete}
+						color={color}
+						deleteColor={deleteColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
+						handleColorPallete={handleColorPallete}
+						setColor={setColor}
+					/>
 					<GraphType setGraphOneType={setGraphOneType} />
 					<Doughnut data={data} />
 				</>
@@ -56,6 +105,16 @@ const Graphs = ({
 		case 'line':
 			return (
 				<>
+					<ColorModal
+						setColorPallete={setColorPallete}
+						colorPallete={colorPallete}
+						color={color}
+						deleteColor={deleteColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
+						handleColorPallete={handleColorPallete}
+						setColor={setColor}
+					/>
 					<GraphType setGraphOneType={setGraphOneType} />
 					<Line data={data} />
 				</>
@@ -63,6 +122,16 @@ const Graphs = ({
 		case 'scatter':
 			return (
 				<>
+					<ColorModal
+						setColorPallete={setColorPallete}
+						colorPallete={colorPallete}
+						color={color}
+						deleteColor={deleteColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
+						handleColorPallete={handleColorPallete}
+						setColor={setColor}
+					/>
 					<GraphType setGraphOneType={setGraphOneType} />
 					<Scatter data={data} />
 				</>
@@ -70,6 +139,16 @@ const Graphs = ({
 		case 'radar':
 			return (
 				<>
+					<ColorModal
+						setColorPallete={setColorPallete}
+						colorPallete={colorPallete}
+						color={color}
+						deleteColor={deleteColor}
+						colorModal={colorModal}
+						setColorModal={setColorModal}
+						handleColorPallete={handleColorPallete}
+						setColor={setColor}
+					/>
 					<GraphType setGraphOneType={setGraphOneType} />
 					<Radar data={data} />
 				</>
