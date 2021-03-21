@@ -29,21 +29,18 @@ const Graphs = ({
 				label: 'First dataset',
 				data: dataNumberArray,
 				fill: true,
-				backgroundColor: ['#c1fa00'],
+				backgroundColor: colorPallete,
 				borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
 			},
 		],
 	};
 	const handleColorPallete = () => {
-		setColorPallete([
-			...colorPallete,
-			{ color, id: Math.floor(1000 * Math.random()) },
-		]);
+		setColorPallete([...colorPallete, color]);
 	};
 	const deleteColor = () => {
 		setColorPallete((currentColors) => currentColors.filter((item) => !item));
 	};
-	console.log(colorModal);
+	console.log(colorPallete);
 	switch (graphOneType[0] || graphTwoType[0]) {
 		case 'pie':
 			return (
