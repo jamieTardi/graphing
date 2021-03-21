@@ -5,6 +5,7 @@ import donut from '../assets/icons/donut.svg';
 import lineChart from '../assets/icons/line-chart.svg';
 import pieChart from '../assets/icons/pie-chart.svg';
 import scatter from '../assets/icons/scatter.svg';
+import radar from '../assets/icons/radar.svg';
 
 const GraphType = ({ setGraphOneType }) => {
 	return (
@@ -67,7 +68,7 @@ const GraphType = ({ setGraphOneType }) => {
 				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
 					<Image
 						className='svg-images'
-						src={barChart}
+						src={radar}
 						onClick={() => {
 							setGraphOneType(['radar']);
 						}}

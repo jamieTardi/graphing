@@ -1,39 +1,21 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<g>
-	<g>
-		<path d="M464,480V48c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v432h-32V336c0-8.832-7.168-16-16-16h-64    c-8.832,0-16,7.168-16,16v144h-32V176c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v304H64V0H32v80H0v32h32v48H0v32h32v48    H0v32h32v48H0v32h32v48H0v32h32v64c0,8.832,7.168,16,16,16h80h64h64h64h64h64h64v-32H464z M176,480h-32V192h32V480z M304,480h-32    V352h32V480z M432,480h-32V64h32V480z"/>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="510" height="510" viewBox="0 0 510 510" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+<defs>
+</defs>
+<g id="icon" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-2.8333333333333712 -2.8333333333333712) scale(5.67 5.67)" >
+	<path d="M 53.207 22.455 c 0.414 0 0.75 0.336 0.75 0.75 V 87.25 c 0 0.414 -0.336 0.75 -0.75 0.75 H 36.793 c -0.414 0 -0.75 -0.336 -0.75 -0.75 V 23.205 c 0 -0.414 0.336 -0.75 0.75 -0.75 H 53.207 M 53.207 20.455 H 36.793 c -1.519 0 -2.75 1.231 -2.75 2.75 V 87.25 c 0 1.519 1.231 2.75 2.75 2.75 h 16.414 c 1.519 0 2.75 -1.231 2.75 -2.75 V 23.205 C 55.957 21.686 54.726 20.455 53.207 20.455 L 53.207 20.455 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 81.611 90 H 65.197 c -1.519 0 -2.75 -1.231 -2.75 -2.75 V 2.75 c 0 -1.519 1.231 -2.75 2.75 -2.75 h 16.414 c 1.519 0 2.75 1.231 2.75 2.75 v 84.5 C 84.361 88.769 83.13 90 81.611 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(165,215,110); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 24.803 42.909 c 0.414 0 0.75 0.336 0.75 0.75 V 87.25 c 0 0.414 -0.336 0.75 -0.75 0.75 H 8.389 c -0.414 0 -0.75 -0.336 -0.75 -0.75 V 43.659 c 0 -0.414 0.336 -0.75 0.75 -0.75 H 24.803 M 24.803 40.909 H 8.389 c -1.519 0 -2.75 1.231 -2.75 2.75 V 87.25 c 0 1.519 1.231 2.75 2.75 2.75 h 16.414 c 1.519 0 2.75 -1.231 2.75 -2.75 V 43.659 C 27.553 42.14 26.322 40.909 24.803 40.909 L 24.803 40.909 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(210,85,90); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<polygon points="34.94,80.39 34.94,82.53 55.08,74.68 55.08,72.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="34.94,72.39 34.94,74.53 55.08,66.68 55.08,64.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="34.94,64.39 34.94,66.53 55.08,58.68 55.08,56.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="34.94,56.39 34.94,58.53 55.08,50.68 55.08,48.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="34.94,48.39 34.94,50.53 55.08,42.68 55.08,40.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="34.94,40.39 34.94,42.53 55.08,34.68 55.08,32.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="34.94,32.39 34.94,34.53 55.08,26.68 55.08,24.53 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="42.51,21.43 34.94,24.39 34.94,26.53 48.02,21.43 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+	<polygon points="38.47,89.15 55.08,82.68 55.08,80.53 34.94,88.39 34.94,89.15 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,195,110); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
 </g>
 </svg>

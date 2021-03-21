@@ -35,9 +35,7 @@ const ColorModal = ({
 					<div className='d-flex flex-column justify-content-center align-items-center'>
 						{colorPallete.map((col, index) => (
 							<div className='d-flex flex-column justify-content-center align-items-center'>
-								<div
-									className='color-box'
-									style={{ background: col.color }}></div>
+								<div className='color-box' style={{ background: col }}></div>
 								<p>
 									Your Color number {++index} is: {col.color}
 								</p>
