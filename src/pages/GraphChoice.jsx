@@ -32,7 +32,6 @@ const GraphChoice = ({
 	const [colorPallete, setColorPallete] = useState([]);
 
 	const numberOfGraphsHandler = (e) => {
-		console.log(e.target.value);
 		if (e.target.value === '') {
 			setNumberOfGraphs(0);
 		} else {

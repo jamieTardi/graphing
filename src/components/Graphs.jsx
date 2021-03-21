@@ -79,7 +79,12 @@ const Graphs = ({
 						setColor={setColor}
 					/>
 					<GraphType setGraphOneType={setGraphOneType} />
-					<Bar data={data} />
+					<div
+						onClick={() => {
+							setColorModal((prev) => !prev);
+						}}>
+						<Bar data={data} />
+					</div>
 				</>
 			);
 		case 'doughnut':
@@ -96,7 +101,12 @@ const Graphs = ({
 						setColor={setColor}
 					/>
 					<GraphType setGraphOneType={setGraphOneType} />
-					<Doughnut data={data} />
+					<div
+						onClick={() => {
+							setColorModal((prev) => !prev);
+						}}>
+						<Doughnut data={data} />
+					</div>
 				</>
 			);
 		case 'line':
@@ -113,7 +123,12 @@ const Graphs = ({
 						setColor={setColor}
 					/>
 					<GraphType setGraphOneType={setGraphOneType} />
-					<Line data={data} />
+					<div
+						onClick={() => {
+							setColorModal((prev) => !prev);
+						}}>
+						<Line data={data} />
+					</div>
 				</>
 			);
 		case 'scatter':
@@ -130,7 +145,12 @@ const Graphs = ({
 						setColor={setColor}
 					/>
 					<GraphType setGraphOneType={setGraphOneType} />
-					<Scatter data={data} />
+					<div
+						onClick={() => {
+							setColorModal((prev) => !prev);
+						}}>
+						<Scatter data={data} />
+					</div>
 				</>
 			);
 		case 'radar':
@@ -147,7 +167,12 @@ const Graphs = ({
 						setColor={setColor}
 					/>
 					<GraphType setGraphOneType={setGraphOneType} />
-					<Radar data={data} />
+					<div
+						onClick={() => {
+							setColorModal((prev) => !prev);
+						}}>
+						<Radar data={data} />
+					</div>
 				</>
 			);
 		default:

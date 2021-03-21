@@ -12,10 +12,7 @@ const ColorModal = ({
 	deleteColor,
 }) => {
 	const handleColorPallete = () => {
-		setColorPallete([
-			...colorPallete,
-			{ color, id: Math.floor(1000 * Math.random()) },
-		]);
+		setColorPallete([...colorPallete, color]);
 	};
 	return (
 		<>
