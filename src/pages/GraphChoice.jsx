@@ -72,13 +72,10 @@ const GraphChoice = ({
 				dataNumber: enterData,
 			},
 		]);
-		console.log(graphData);
 	};
 
-	const handleRemoveColor = () => {
-		colorPallete.filter((colors) => {
-			setColorPallete(color !== colors.color);
-		});
+	const deleteColor = () => {
+		setColorPallete((currentColors) => currentColors.filter((item) => !item));
 	};
 
 	//Switch case statement,
@@ -108,7 +105,7 @@ const GraphChoice = ({
 				</>
 			);
 		default:
-			console.log('nothing');
+			<NoGraphs />;
 	}
 
 	return (
@@ -183,31 +180,37 @@ const GraphChoice = ({
 					onClick={() => {
 						setColorModal((prev) => !prev);
 					}}>
-					<Modal.Title>Colour Picker for your Piece of Data</Modal.Title>
+					<Modal.Title>Colour Picker for your Chart Data</Modal.Title>
 				</Modal.Header>
 				<Modal.Body className='d-flex'>
 					<div>
 						<HexColorPicker color={color} onChange={setColor} />
-						<p>{color}</p>
+						<p>The Hex Code is: {color}</p>
 						<Button variant='primary' onClick={handleColorPallete}>
-							Save Color For Chart
+							Add Color to Pallete
 						</Button>
 					</div>
-					<div>
+					<div className='d-flex flex-column justify-content-center align-items-center'>
 						{colorPallete.map((col, index) => (
-							<div>
+							<div className='d-flex flex-column justify-content-center align-items-center'>
 								<div
 									className='color-box'
 									style={{ background: col.color }}></div>
 								<p>
-									Your Color number {index} is: {col.color}
+									Your Color number {++index} is: {col.color}
 								</p>
-
-								<Button onClick={handleRemoveColor}>Remove this Color</Button>
 							</div>
 						))}
+						{colorPallete.length > 0 ? (
+							<Button onClick={deleteColor}>Delete all colors</Button>
+						) : (
+							''
+						)}
 					</div>
 				</Modal.Body>
+				<Button className='btn-success' onClick={() => setColorModal(false)}>
+					Save selected colors for charts
+				</Button>
 			</Modal>
 
 			<DataTable graphData={graphData} />
