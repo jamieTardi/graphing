@@ -7,6 +7,7 @@ import {
 	Modal,
 	FormGroup,
 	FormLabel,
+	Form,
 } from 'react-bootstrap';
 import { NoGraphs, Graphs, DataTable } from '../components/index';
 import Draggable from 'react-draggable';
@@ -125,50 +126,66 @@ const GraphChoice = ({
 				Please enter each piece of data one piece of data at a time and press
 				Enter Data.
 			</p>
-			<FormGroup>
-				<Row>
-					<Col>
-						<FormLabel className='font-weight-bold'>Name of Dataset</FormLabel>
-						<input
-							className='form-control'
-							placeholder='Please enter each piece of data and press submit'
-							onChange={handleEnterDataName}
-							type='text'
-						/>
-					</Col>
-				</Row>
+			<Form>
+				<FormGroup>
+					<Row>
+						<Col>
+							<FormLabel className='font-weight-bold'>
+								Name of Dataset
+							</FormLabel>
+							<input
+								className='form-control'
+								placeholder='Please enter each piece of data and press submit'
+								onChange={handleEnterDataName}
+								type='text'
+							/>
+						</Col>
+					</Row>
 
-				<Row>
-					<Col>
-						<FormLabel className='font-weight-bold'>
-							Number in Dataset
-						</FormLabel>
-						<input
-							className='form-control'
-							placeholder='Please enter each piece of data and press submit'
-							onChange={handleEnterData}
-							type='number'
-						/>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<FormLabel className='font-weight-bold'>
-							Number of Graphs you require
-						</FormLabel>
-						<input
-							onChange={numberOfGraphsHandler}
-							type='number'
-							className='form-control'
-							placeholder='Enter a number between 1-5'
-							disabled={graphData.length > 1 ? false : true}
-						/>
-						<Button onClick={handleSubmitData} type='reset'>
-							Enter Data
-						</Button>
-					</Col>
-				</Row>
-			</FormGroup>
+					<Row>
+						<Col>
+							<FormLabel className='font-weight-bold'>
+								Number in Dataset
+							</FormLabel>
+							<input
+								className='form-control'
+								placeholder='Please enter each piece of data and press submit'
+								onChange={handleEnterData}
+								type='number'
+							/>
+						</Col>
+					</Row>
+					<Button onClick={handleSubmitData} type='reset'>
+						Enter Data
+					</Button>
+					<Row>
+						<Col>
+							<FormLabel className='font-weight-bold'>
+								Number of Graphs you require
+							</FormLabel>
+							{graphData.length >= 2 ? (
+								<>
+									<Form.Control as='select' custom>
+										<option onClick={numberOfGraphsHandler}>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</Form.Control>
+								</>
+							) : (
+								<>
+									<p>
+										Please enter at least 2 datasets of information in the graph
+										data boxes above.
+									</p>
+									<Form.Control as='select' disabled custom></Form.Control>
+								</>
+							)}
+						</Col>
+					</Row>
+				</FormGroup>
+			</Form>
 
 			<DataTable graphData={graphData} />
 			<Row>
