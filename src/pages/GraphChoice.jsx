@@ -187,7 +187,7 @@ const GraphChoice = ({
 				</FormGroup>
 			</Form>
 
-			<DataTable graphData={graphData} />
+			<DataTable graphData={graphData} setGraphData={setGraphData} />
 			<Row>
 				<Col>
 					{numberOfGraphs === 0 || numberOfGraphs === undefined ? (

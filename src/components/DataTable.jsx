@@ -1,7 +1,11 @@
 import React from 'react';
 import { Table, Button } from 'react-bootstrap';
+import { v4 as uuidv4 } from 'uuid';
 
-const DataTable = ({ graphData }) => {
+const DataTable = ({ graphData, setGraphData }) => {
+	const handleDeleteData = (data) => {
+		setGraphData(graphData.filter((item) => item.id !== data));
+	};
 	return (
 		<div>
 			{graphData.length > 0 ? (
@@ -15,11 +19,14 @@ const DataTable = ({ graphData }) => {
 					<tbody>
 						{graphData.map((value, index) => (
 							<tr>
-								{console.log(value)}
 								<td>{++index}</td>
 								<td>{value.dataNumber}</td>
 								<td>{value.dataName}</td>
-								<Button class='btn-danger btn'>Remove Data</Button>
+								<Button
+									class='btn-danger btn'
+									onClick={() => handleDeleteData(value.id)}>
+									Remove Data
+								</Button>
 							</tr>
 						))}
 					</tbody>
