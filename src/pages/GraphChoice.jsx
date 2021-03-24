@@ -167,10 +167,10 @@ const GraphChoice = ({
 								<>
 									<Form.Control as='select' custom>
 										<option onClick={numberOfGraphsHandler}>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
+										<option onClick={numberOfGraphsHandler}>2</option>
+										<option onClick={numberOfGraphsHandler}>3</option>
+										<option onClick={numberOfGraphsHandler}>4</option>
+										<option onClick={numberOfGraphsHandler}>5</option>
 									</Form.Control>
 								</>
 							) : (

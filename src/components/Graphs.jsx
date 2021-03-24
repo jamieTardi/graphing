@@ -1,6 +1,8 @@
 import React from 'react';
 import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
 import { GraphType, ColorModal } from './';
+import { Button } from 'react-bootstrap';
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
 
 const Graphs = ({
 	graphOneType,
@@ -45,23 +47,37 @@ const Graphs = ({
 		case 'pie':
 			return (
 				<>
-					<ColorModal
-						setColorPallete={setColorPallete}
-						colorPallete={colorPallete}
-						color={color}
-						deleteColor={deleteColor}
-						colorModal={colorModal}
-						setColorModal={setColorModal}
-						handleColorPallete={handleColorPallete}
-						setColor={setColor}
-					/>
+					<Document>
+						<Page>
+							<ColorModal
+								setColorPallete={setColorPallete}
+								colorPallete={colorPallete}
+								color={color}
+								deleteColor={deleteColor}
+								colorModal={colorModal}
+								setColorModal={setColorModal}
+								handleColorPallete={handleColorPallete}
+								setColor={setColor}
+							/>
 
-					<GraphType setGraphOneType={setGraphOneType} />
-					<div
-						onClick={() => {
-							setColorModal((prev) => !prev);
-						}}>
-						<Pie data={data} />
+							<GraphType setGraphOneType={setGraphOneType} />
+							<div
+								onClick={() => {
+									setColorModal((prev) => !prev);
+								}}>
+								<Pie data={data} />
+							</div>
+							<Button>Click to create PDF</Button>
+						</Page>
+					</Document>
+					<div>
+						<div>
+							<PDFDownloadLink document={<Page />} fileName='somename.pdf'>
+								{({ blob, url, loading, error }) =>
+									loading ? 'Loading document...' : 'Download now!'
+								}
+							</PDFDownloadLink>
+						</div>
 					</div>
 				</>
 			);
@@ -85,6 +101,7 @@ const Graphs = ({
 						}}>
 						<Bar data={data} />
 					</div>
+					<Button>Click to create PDF</Button>
 				</>
 			);
 		case 'doughnut':
@@ -107,6 +124,7 @@ const Graphs = ({
 						}}>
 						<Doughnut data={data} />
 					</div>
+					<Button>Click to create PDF</Button>
 				</>
 			);
 		case 'line':
@@ -129,6 +147,7 @@ const Graphs = ({
 						}}>
 						<Line data={data} />
 					</div>
+					<Button>Click to create PDF</Button>
 				</>
 			);
 		case 'scatter':
@@ -151,6 +170,7 @@ const Graphs = ({
 						}}>
 						<Scatter data={data} />
 					</div>
+					<Button>Click to create PDF</Button>
 				</>
 			);
 		case 'radar':
@@ -173,6 +193,7 @@ const Graphs = ({
 						}}>
 						<Radar data={data} />
 					</div>
+					<Button>Click to create PDF</Button>
 				</>
 			);
 		default:
