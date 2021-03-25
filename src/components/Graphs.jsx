@@ -1,5 +1,5 @@
 import React from 'react';
-import { Doughnut, Pie, Bar, Line, Scatter, Radar } from 'react-chartjs-2';
+import { Doughnut, Pie, Bar, Line, Polar, Radar } from 'react-chartjs-2';
 import { GraphType, ColorModal } from './';
 import { Button } from 'react-bootstrap';
 import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
@@ -150,7 +150,7 @@ const Graphs = ({
 					<Button>Click to create PDF</Button>
 				</>
 			);
-		case 'scatter':
+		case 'polar':
 			return (
 				<>
 					<ColorModal
@@ -168,7 +168,7 @@ const Graphs = ({
 						onClick={() => {
 							setColorModal((prev) => !prev);
 						}}>
-						<Scatter data={data} />
+						<Polar data={data} />
 					</div>
 					<Button>Click to create PDF</Button>
 				</>

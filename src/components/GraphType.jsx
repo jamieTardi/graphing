@@ -60,10 +60,10 @@ const GraphType = ({ setGraphOneType }) => {
 						className='svg-images '
 						src={scatter}
 						onClick={() => {
-							setGraphOneType(['scatter']);
+							setGraphOneType(['polar']);
 						}}
 					/>
-					<h5>Scatter Graph</h5>
+					<h5>Polar Graph</h5>
 				</Col>
 				<Col className='mb-3 d-flex justify-content-center align-items-center flex-column'>
 					<Image

@@ -48,9 +48,6 @@ const GraphChoice = ({
 
 	const handleEnterData = (e) => {
 		setEnterData(e.target.value);
-		if (e.target.value > 3) {
-			setColorModal(true);
-		}
 	};
 	const handleEnterDataName = (e) => {
 		setDataName(e.target.value);
@@ -119,8 +116,8 @@ const GraphChoice = ({
 			)}
 			<p>
 				Please enter the name for each piece of data in order, for example if
-				your first piece of data is for GME stock and it 100 enter GME and in
-				the next box 100.
+				your first piece of data is for GME stock and the value is 100 enter GME
+				in the first input box and in the next box 100.
 			</p>
 			<p>
 				Please enter each piece of data one piece of data at a time and press
@@ -138,6 +135,7 @@ const GraphChoice = ({
 								placeholder='Please enter each piece of data and press submit'
 								onChange={handleEnterDataName}
 								type='text'
+								required
 							/>
 						</Col>
 					</Row>
@@ -152,6 +150,7 @@ const GraphChoice = ({
 								placeholder='Please enter each piece of data and press submit'
 								onChange={handleEnterData}
 								type='number'
+								required
 							/>
 						</Col>
 					</Row>
