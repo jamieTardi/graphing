@@ -90,11 +90,167 @@ const GraphChoice = ({
 						color={color}
 						setColorModal={setColorModal}
 						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
 					/>
 					<Graphs
 						graphOneType={graphOneType}
 						setGraphOneType={setGraphOneType}
 						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+				</>
+			);
+		case 3:
+			return (
+				<>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+				</>
+			);
+		case 4:
+			return (
+				<>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+				</>
+			);
+		case 5:
+			return (
+				<>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
+					/>
+					<Graphs
+						graphOneType={graphOneType}
+						setGraphOneType={setGraphOneType}
+						graphData={graphData}
+						color={color}
+						setColorModal={setColorModal}
+						colorModal={colorModal}
+						setColor={setColor}
+						colorPallete={colorPallete}
+						setColorPallete={setColorPallete}
 					/>
 				</>
 			);
